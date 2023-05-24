@@ -1,0 +1,47 @@
+<a class="btn btn-primary btn-lg" routerLink="/home">
+  <i class="fa fa-arrow-left"></i> Back</a>
+<div class="container">
+  <div class="row">
+    <div class="col-md-4">
+
+    </div>
+    <div class="col-md-4">
+      <div class="card">
+        <div class="card-header">
+          <h2>
+            Update Product
+          </h2>
+        </div>
+        <div class="card-body">
+          <form id="formNewProduct" name='formNewProduct' #productData="ngForm" (ngSubmit)="updateProduct(productData.value)">
+            <div class="form-group">
+              <label>Product ID:</label>
+              <input class="form-control" type="number" name="p_id" id="p_id" placeholder="p_id" [(ngModel)]="data.p_id" ngModel>
+            </div>
+
+            <br>
+
+            <div class="form-group">
+              <label>Product Name:</label>
+              <input class="form-control" type="text" name="p_name" id="p_name" placeholder="p_name" [(ngModel)]="data.p_name" ngModel>
+            </div>
+            <br>
+
+            <div class="form-group">
+              <label>Product Cost:</label>
+              <input class="form-control" type="number" name="p_cost" id="p_cost" placeholder="ProductCost" [(ngModel)]="data.p_cost" ngModel>
+            </div>
+            <br>
+
+            <input class="btn btn-warning text-center" type="submit" value="Update Product">
+          </form>
+          <h3 class="text-warning" *ngIf="isUpdated">{{confirmationString}}</h3>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+
+    </div>
+  </div>
+
+</div>

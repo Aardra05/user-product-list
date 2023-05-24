@@ -1,0 +1,42 @@
+{
+  "products": [
+    {
+      "p_id": 1,
+      "p_name": "book",
+      "p_cost": 45,
+      "id": 1
+    },
+    {
+      "p_id": 2,
+      "p_name": "pen",
+      "p_cost": 10,
+      "id": 2
+    },
+    {
+      "p_id": 2,
+      "p_name": "A4 paper",
+      "p_cost": 5,
+      "id": 3
+    },
+    {
+      "p_id": 3,
+      "p_name": "Bag",
+      "p_cost": 500,
+      "id": 4
+    }
+  ],
+  "users": [
+    {
+      "u_id": "1",
+      "u_name": "name",
+      "u_pass": "pass",
+      "id": 1
+    },
+    {
+      "u_id": "2",
+      "u_name": "hi",
+      "u_pass": "123",
+      "id": 2
+    }
+  ]
+}

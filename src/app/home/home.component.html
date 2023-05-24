@@ -1,0 +1,49 @@
+<a class="btn btn-warning btn-md" routerLink="/product">
+  <i class="fa fa-plus"></i> Add New Product</a>
+  <a class="btn btn-warning btn-md" routerLink="/user-list">
+    <i class="fa fa-plus"></i> Users</a>
+  <a class="btn btn-warning btn-md" routerLink="/login"> Logout</a>
+
+<div class="p-1">
+  <div class="container">
+    <div class="row">
+      <div class="col">
+        <div class="card">
+          <div class="card-header btn-#00e676 green accent-3 text-white">
+            <h2 class="card-title">
+              <i class="fa fa-product-hunt" aria-hidden="true"></i> Products</h2>
+          </div>
+          <div class="card-body">
+            <table class="table table-striped">
+              <thead class="blue-grey lighten-4 text-center">
+                <tr>
+                  <th>ID</th>
+                  <th>Product ID</th>
+                  <th>Product Name</th>
+                  <th>Product Cost</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr *ngFor="let product of products" class="text-center">
+                  <td>{{product.id}}</td>
+                  <td>{{product.p_id}}</td>
+                  <td>{{product.p_name}}</td>
+                  <td>{{product.p_cost}}</td>
+                  <td>
+
+                    <a class="btn btn-danger btn-sm" (click)="deleteProduct(product.id)">Delete</a>
+
+                  </td>
+                  <td>
+                    <a class="btn btn-outline-warning btn-sm" [routerLink]="['/updateProduct', product.id]">Update</a>
+
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

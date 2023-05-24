@@ -1,0 +1,46 @@
+<div class="h">
+<div class="container">
+  <div class="row">
+    <div class="col-md-4"></div>
+    <div class="col-md-4">
+      <div class="card">
+        <div class="card-header">
+          <h2>
+            Sign up
+          </h2>
+          <h6>Register</h6>
+        </div>
+        <div class="card-body">
+          <form id="formNewUser" name='formNewUser' #userData="ngForm" (ngSubmit)="addNewUser(userData.value)">
+            <div class="form-group">
+              <label>User ID:</label>
+              <input class="form-control" type="text" name="u_id" id="u_id" placeholder="Enter User ID" ngModel>
+            </div>
+
+            <br>
+
+            <div class="form-group">
+              <label>User Name:</label>
+              <input class="form-control" type="text" name="u_name" id="u_name" placeholder="Enter user Name" ngModel>
+            </div>
+            <br>
+
+            <div class="form-group">
+              <label>Password :</label>
+              <input class="form-control" type="password" name="u_pass" id="u_pass" placeholder="Enter Password" ngModel>
+            </div>
+            <br>
+            <input class="btn btn-success justify ml-5" type="submit" value="Add User"> 
+            <br> <br>
+            <h6>Already have a account? </h6>
+            <a routerLink="/login" > Login </a>
+            <br>
+          </form>
+          <h3 class="text-success" *ngIf="isAdded">{{confirmationString}}</h3>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4"></div>
+  </div>
+</div>
+</div>

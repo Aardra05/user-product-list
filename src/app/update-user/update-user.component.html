@@ -1,0 +1,47 @@
+<a class="btn btn-primary btn-lg" routerLink="/home">
+  <i class="fa fa-arrow-left"></i> Back</a>
+<div class="container">
+  <div class="row">
+    <div class="col-md-4">
+
+    </div>
+    <div class="col-md-4">
+      <div class="card">
+        <div class="card-header">
+          <h2>
+            Update User
+          </h2>
+        </div>
+        <div class="card-body">
+          <form id="formNewUser" name='formNewUser' #productData="ngForm" (ngSubmit)="updateUser(userData.value)">
+            <div class="form-group">
+              <label>User ID:</label>
+              <input class="form-control" type="text" name="u_id" id="u_id" placeholder="u_id" [(ngModel)]="data.u_id" ngModel>
+            </div>
+
+            <br>
+
+            <div class="form-group">
+              <label>User Name:</label>
+              <input class="form-control" type="text" name="u_name" id="u_name" placeholder="u_name" [(ngModel)]="data.u_name" ngModel>
+            </div>
+            <br>
+
+            <div class="form-group">
+              <label>Password </label>
+              <input class="form-control" type="number" name="u_pass" id="u_pass" placeholder="Password" [(ngModel)]="data.u_pass" ngModel>
+            </div>
+            <br>
+
+            <input class="btn btn-warning text-center" type="submit" value="Update User">
+          </form>
+          <h3 class="text-warning" *ngIf="isUpdated">{{confirmationString}}</h3>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+
+    </div>
+  </div>
+
+</div>

@@ -1,0 +1,46 @@
+<a class="btn btn-primary btn-lg" routerLink="/home">
+  <i class="fa fa-arrow-left"></i> Back</a>
+
+<div class="p-1">
+  <div class="container">
+    <div class="row">
+      <div class="col">
+        <div class="card">
+          <div class="card-header btn-#00e676 green accent-3 text-white">
+            <h2 class="card-title">
+              <i class="fa fa-user-hunt" aria-hidden="true"></i> User</h2>
+          </div>
+          <div class="card-body">
+            <table class="table table-striped">
+              <thead class="blue-grey lighten-4 text-center">
+                <tr>
+                  <th>ID</th>
+                  <th>User ID</th>
+                  <th>User Name</th>
+                  <th>Password</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr *ngFor="let user of users" class="text-center">
+                  <td>{{user.id}}</td>
+                  <td>{{user.u_id}}</td>
+                  <td>{{user.u_name}}</td>
+                  <td>{{user.u_pass}}</td>
+                  <td>
+
+                    <a class="btn btn-danger btn-sm" (click)="deleteUser(user.id)">Delete</a>
+
+                  </td>
+                  <td>
+                    <a class="btn btn-outline-warning btn-sm" [routerLink]="['/updateUser', user.id]">Update</a>
+
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
